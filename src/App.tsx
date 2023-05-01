@@ -1,24 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./components/navbar/Navbar";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar
+        className="bg-red"
+        loginCallback={() => {
+          console.log("Login button targeted");
+        }}
+        logo={{
+          type: "image",
+          payload:
+            "https://www.thebalancemoney.com/thmb/1Du74z2oTAVhbL98WTXsMvop9A8=/fit-in/1500x1000/filters:format(png):fill(transparent):max_bytes(150000):strip_icc()/Summitsoft-d3565227c58a4471ab17e9b3186bc24d.jpg",
+        }}
+        navLinks={
+          <>
+            <a href="/home">Home</a>
+            <a href="/home">Menu</a>
+            {true && <a href="/home">Cart</a>}
+          </>
+        }
+        userDropdown={
+          <>
+            Any JSX Element
+            <input type="text" placeholder="Test" />
+          </>
+        }
+        isUser={false}
+      />
     </div>
   );
 }
