@@ -1,7 +1,10 @@
+import { useState } from "react";
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
+import ValidInput from "./components/validInput/ValidInput";
 
 function App() {
+  const inputState = useState("");
   return (
     <div className="App">
       <Navbar
@@ -29,6 +32,16 @@ function App() {
         }
         isUser={false}
       />
+      <div>
+        <ValidInput
+          errorMessage="Invalid Input"
+          inputState={inputState}
+          type="PHONE"
+        />
+      </div>
+      <div>
+        <ValidInput inputState={inputState} type="NUMBER" />
+      </div>
     </div>
   );
 }
