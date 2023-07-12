@@ -1,0 +1,17 @@
+html {
+  cursor: none;
+}
+
+body {
+  background-color: black;
+}
+
+.cursor .piece {
+  border-radius: 100%;
+  border: 0.1rem solid white;
+  position: fixed;
+  width: 4rem;
+  margin-top: -2rem;
+  margin-left: -2rem;
+  height: 4rem;
+}/*# sourceMappingURL=snakecursor.css.map */

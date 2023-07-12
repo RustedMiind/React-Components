@@ -2,12 +2,14 @@ import { useState } from "react";
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import ValidInput from "./components/validInput/ValidInput";
+import SnakeCursor from "./components/snake-cursor/SnakeCursor";
 
 function App() {
   const inputState = useState("");
   return (
     <div className="App">
-      <Navbar
+      <SnakeCursor />
+      {/* <Navbar
         className="bg-red"
         loginCallback={() => {
           console.log("Login button targeted");
@@ -41,7 +43,7 @@ function App() {
       </div>
       <div>
         <ValidInput inputState={inputState} type="NUMBER" />
-      </div>
+      </div> */}
     </div>
   );
 }
